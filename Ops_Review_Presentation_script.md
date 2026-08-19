@@ -1,4 +1,5 @@
-# Quarterly Operations Review - 15-Minute Presentation Script & CFO Q&A
+# Quarterly Operations Review - 15-Minute Presentation Script
+
 
 ## Presentation Timing Plan
 
@@ -33,6 +34,7 @@ Our inventory optimization incorporates both lead-time and demand variance into 
 ### 8:30 - 10:30: Slide 8 - Strategic Recommendations
 
 "We propose three immediate actions:
+
 1. Reallocate KES 14.2M working capital to priority station safety stock by September 30.
 2. Automate ERP reorder triggers using our 60-day Prophet forecast.
 3. Add two dispatch coordinators for peak holiday scheduling.
@@ -40,4 +42,3 @@ Our inventory optimization incorporates both lead-time and demand variance into 
 Net annual benefit: **KES 32.6 million**."
 
 ---
-

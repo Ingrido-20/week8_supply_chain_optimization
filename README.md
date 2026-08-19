@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This project optimizes supply chain logistics across a Kenyan fuel depot network (Nairobi Depot & Mombasa Depot) serving 8 regional retail stations.
+This repository contains the complete Week 8 Data Analytics assignment deliverables for **Ingrid Miriam Ondu**. The project optimizes supply chain logistics across a Kenyan fuel depot network (Nairobi Depot & Mombasa Depot) serving 8 regional retail stations.
 
 ### Key Recommendation
 

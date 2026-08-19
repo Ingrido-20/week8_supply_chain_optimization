@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """
 Build Lab Artifacts for Week 8 Supply Chain Optimization Lab & Executive Briefing
-Author: Ingrid Miriam Ondu
-Course: Data Analytics - Week 8
 
 This script generates synthetic Kenyan fuel demand datasets, measures the Bullwhip Effect,
 trains demand forecasting models (Prophet with holiday regressors & baselines), computes
@@ -907,21 +905,43 @@ def create_markdown_deliverables():
     """Generates hackathon2_reflection.md, Ops_Review_Presentation_script.md, Executive_Operations_Review.md, and README.md."""
     
     # 1. Hackathon #2 Reflection
-    reflection_text = """# Hackathon #2 Reflection - Team Performance & Insights
+    reflection_text = """# Hackathon #2 Reflection & Strategy - FlowGuard Revenue Assurance Platform
+
 **Author:** Ingrid Miriam Ondu  
 **Course:** Data Analytics - Week 8 Hackathon #2  
+**Platform Focus:** FlowGuard Revenue Assurance & Supply Chain Optimization Platform  
+
+---
 
 ## 1. Division of Labor & Team Collaboration
-Our team structured the Hackathon #2 workflow by allocating specialized responsibilities based on core strengths:
-- **Demand Forecasting Lead:** Focused on time-series cleaning, Prophet hyperparameter tuning, and fitting external holiday regressors (Easter, Christmas, Madaraka Day) to reduce MAPE.
-- **Inventory & Optimization Lead:** Formulated the combined safety stock variance equations and built the PuLP Linear Programming transportation model allocating fuel from Nairobi and Mombasa depots.
-- **Executive Presentation Lead:** Synthesized analytical outputs into an 8-slide executive BLUF presentation deck, wrote the CFO Q&A simulation script, and created visual C3 operational dashboards.
+For this week's Hackathon #2, our team structured responsibilities around building and validating the **FlowGuard Revenue Assurance Platform**:
+- **Revenue Assurance & Anomaly Lead:** Responsible for meter reconciliation algorithms, tracking volumetric shrinkage, and detecting unmetered fuel variance between depot dispatch racks and retail station receipt meters.
+- **Demand Forecasting Lead:** Focused on time-series cleaning, Prophet hyperparameter tuning, and incorporating external Kenyan public holiday regressors (Easter, Madaraka, Mashujaa, Jamhuri, Christmas) to establish baseline demand.
+- **Optimization & Platform Lead:** Formulated the combined lead-time variance safety stock equations and built the PuLP Linear Programming model for cost-minimal depot-to-station distribution, integrating outputs directly into FlowGuard's operational dashboard.
 
-## 2. Biggest Analytical Hurdle
-The primary analytical challenge was modeling non-linear demand spikes during Kenyan public holidays alongside volatile supplier lead times. Standard moving-average models significantly under-predicted holiday surge volumes, resulting in severe stockout risks. We resolved this by embedding custom holiday indicator variables into Prophet and incorporating lead-time variance ($\sigma_L$) directly into the combined safety stock standard deviation formula ($SS = Z \times \sqrt{L \cdot \sigma_d^2 + \bar{d}^2 \cdot \sigma_L^2}$).
+---
 
-## 3. Ensuring Actionable Recommendations
-To translate theoretical models into clear operational decisions, we converted abstract safety stock figures into concrete station-specific Reorder Point (ROP) action rules. Additionally, the PuLP optimization output was formatted into a daily dispatch scheduling matrix specifying exact truck litre allocations per route. This enabled senior leadership to approve a KES 14.2M working capital reallocation that protects KES 46.8M in annualized margin.
+## 2. Anticipated Analytical & Technical Challenges
+As we execute this week's hackathon, we anticipate three major hurdles:
+1. **Differentiating Volumetric Leakage from Seasonal Volatility:** Reconciling high-frequency meter telemetry without flagging legitimate holiday demand surges as revenue loss anomalies.
+2. **Modeling Combined Lead Time & Demand Variance:** Accurately calculating Safety Stock ($SS = Z \\times \\sqrt{L \\cdot \\sigma_d^2 + \\bar{d}^2 \\cdot \\sigma_L^2}$) when both supplier lead times (\\sigma_L) and retail demand (\\sigma_d) spike simultaneously.
+3. **Dynamic Re-Optimization Under Node Disturbance:** Ensuring the PuLP linear program dynamically re-allocates depot capacity in real time when FlowGuard flags a station receipt delay or depot rack maintenance outage.
+
+---
+
+## 3. Targeted Improvements for the FlowGuard Platform
+We are making three core enhancements to upgrade FlowGuard into an enterprise-grade revenue assurance and logistics platform:
+1. **Automated Volumetric Loss & Shrinkage Detection:** Integrating automated meter variance triggers that compare physical delivered litres against POS invoiced sales to isolate siphoning and transit losses.
+2. **Dynamic Reorder Point (ROP) Engine:** Upgrading from static min-max triggers to automated ROP thresholds driven by Prophet 60-day forecast feeds and 98.5% target service levels (Z = 2.170).
+3. **C3 Executive Decision Dashboard:** Embedding a unified dashboard providing Clarity, Context, and Continuity across fill rates, stockout margin risk, and PuLP fleet dispatch schedules.
+
+---
+
+## 4. Expected Hackathon Outcomes & Financial Impact
+Upon completing Hackathon #2, we expect FlowGuard to deliver concrete, actionable operational and financial outcomes:
+- **Protected Annual Exposure:** Protect **KES 46.8M** in annualized margin risk caused by stockouts, unmetered losses, and emergency freight expediting.
+- **Fill Rate Elevation:** Improve customer fill rate from **96.5% to 98.5%** while reducing stockout frequency to **< 1.2%**.
+- **Actionable Investment Plan:** Deliver a validated KES 14.2M safety stock and fleet reallocation package producing an estimated **KES 32.6M net annual benefit** (2.3x net ROI) with payback in under 6 months.
 """
     (ROOT / "hackathon2_reflection.md").write_text(reflection_text, encoding="utf-8")
     print("Created hackathon2_reflection.md")
