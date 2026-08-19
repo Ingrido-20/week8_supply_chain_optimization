@@ -1,0 +1,4 @@
+network_scale,algorithm,reason
+"Small depot network under 5,000 nodes",Dijkstra's Algorithm,"Exact, single-source shortest path calculation with standard priority queues."
+"Medium regional network up to 250,000 nodes",A* Search Algorithm,Heuristic distance estimate (Euclidean/Manhattan) reduces graph traversal search space.
+Large metropolitan network (>1M nodes),Contraction Hierarchies (CH),Two-phase pre-computation allows sub-millisecond query execution for dynamic dispatch.

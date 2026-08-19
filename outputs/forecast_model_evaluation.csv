@@ -1,0 +1,5 @@
+Model,MAPE (%),RMSE (L)
+Prophet (with Holiday Regressors),2.56,12407.43
+Exponential Smoothing (α=0.3),4.6,23251.64
+7-Day Moving Average,4.56,21120.01
+30-Day Moving Average,4.56,21120.36
