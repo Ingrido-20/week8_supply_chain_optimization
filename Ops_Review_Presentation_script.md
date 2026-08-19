@@ -1,6 +1,4 @@
 # Quarterly Operations Review - 15-Minute Presentation Script & CFO Q&A
-**Speaker:** Ingrid Miriam Ondu  
-**Audience:** Senior Management Team & CFO  
 
 ## Presentation Timing Plan
 
@@ -17,19 +15,23 @@
 ## Speech Script
 
 ### 0:00 - 2:00: Slide 1 & 2 - Executive Recommendation (BLUF)
+
 "Good morning, members of the executive team. My recommendation today is direct: approve a **KES 14.2 million** safety-stock and distribution reallocation package by **30 September 2026**.
 
 This action will elevate our customer fill rate from 96.5% to **98.5%**, eliminate predictable stockouts during holiday peaks, and protect **KES 46.8 million** in annualized margin exposure across our 8 regional retail stations."
 
 ### 2:00 - 4:30: Slide 3 & 4 - Safety & Equipment Recaps (Weeks 6 & 7)
+
 "Before diving into supply chain mechanics, let us recap our operational foundation. In Week 7, we achieved a TRIFR reduction to 1.1 with 98.2% regulatory safety compliance and zero environmental spills. In Week 6, our predictive maintenance RUL models reduced depot pump failure risks by 64%. Operational safety and asset reliability are the bedrock that allows our distribution optimization to succeed."
 
 ### 4:30 - 8:30: Slide 5, 6 & 7 - Supply Chain Forecast & Optimization
+
 "Turning to supply chain performance: using a Prophet model with custom Kenyan holiday regressors, we achieved a **4.12% MAPE**, far outperforming static moving averages. 
 
 Our inventory optimization incorporates both lead-time and demand variance into combined safety stock equations. Our policy simulation proves that holding targeted safety stock drops stockout frequency from 14.2% down to under 1.2%. Furthermore, our PuLP linear programming distribution model optimizes depot-to-station allocation, reducing transportation costs by 11.4%."
 
 ### 8:30 - 10:30: Slide 8 - Strategic Recommendations
+
 "We propose three immediate actions:
 1. Reallocate KES 14.2M working capital to priority station safety stock by September 30.
 2. Automate ERP reorder triggers using our 60-day Prophet forecast.
@@ -39,10 +41,3 @@ Net annual benefit: **KES 32.6 million**."
 
 ---
 
-## CFO Q&A Simulation Segment
-
-**CFO:** "Ingrid, why are we locking up KES 14.2 million in working capital for safety stock instead of relying on emergency expedited freight when demand spikes?"
-
-**Ingrid Miriam Ondu:** "Thank you for that crucial question. Relying on emergency expedited freight is a false economy. In Q1 and Q2 alone, emergency spot-trucking cost us KES 12.4M in premium transport fees, while lost sales from stockouts cost KES 29.6M in lost gross margin.
-
-Holding KES 14.2M in inventory incurs an annual carrying cost of under KES 1.8M. By holding targeted safety stock at high-lead-time stations, we eliminate KES 46.8M in combined stockout, penalty, and expediting costs. This generates an estimated **KES 32.6M net annual benefit**—delivering a 2.3x net ROI with complete capital payback in under 6 months."
